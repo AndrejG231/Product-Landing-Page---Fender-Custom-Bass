@@ -31,7 +31,7 @@ body {
   background: -webkit-gradient(linear, left bottom, left top, from(#21201e), color-stop(30%, #c47623), color-stop(60%, #c47623), to(#21201e));
   background: linear-gradient(0deg, #21201e 0%, #c47623 30%, #c47623 60%, #21201e 100%);
   overflow: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 .section_title {
@@ -206,8 +206,8 @@ body {
   width: 100vw;
   top: 100vh;
   left: 0;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #21201e), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(0deg, #21201e 50%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #21201e), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #21201e 40%, rgba(0, 0, 0, 0) 100%);
 }
 
 .cover_top {
@@ -215,7 +215,7 @@ body {
   width: 100vw;
   top: -200vh;
   left: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(50%, #21201e));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #21201e 50%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(60%, #21201e));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #21201e 60%);
 }
 /*# sourceMappingURL=main.css.map */

@@ -40,7 +40,7 @@ body {
     $bright-black 100%
   );
   overflow: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 .section_title {
@@ -186,7 +186,7 @@ body {
   width: 100vw;
   top: 100vh;
   left: 0;
-  background: linear-gradient(0deg, $bright-black 50%, $empty 100%);
+  background: linear-gradient(0deg, $bright-black 40%, $empty 100%);
 }
 
 .cover_top{
@@ -194,5 +194,5 @@ body {
   width: 100vw;
   top: -200vh;
   left: 0;
-  background: linear-gradient(0deg, $empty 0%, $bright-black 50%);
+  background: linear-gradient(0deg, $empty 0%, $bright-black 60%);
 }
