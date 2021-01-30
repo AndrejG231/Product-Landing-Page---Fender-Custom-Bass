@@ -1,7 +1,7 @@
 $dark-brown: rgb(196, 118, 35);
 $bright-black: rgb(33, 32, 30);
 $light-brown: rgb(232, 150, 63);
-$silver: rgb(225, 235, 255);
+$silver: rgb(255, 255, 255);
 $silver-transparent: rgba(225, 235, 255, 0.1);
 $empty: rgba(0, 0, 0, 0);
 
@@ -52,13 +52,13 @@ body {
     -1px 1px 0 $bright-black, 1px 1px 0 $bright-black;
 }
 
-.section_subtitle{
-    font-size: 1.9rem;
-    color: $silver;
-    margin: 0.2rem;
-    text-align: center;
-    text-shadow: -1px -1px 0 $bright-black,
-    -1px 1px 0 $bright-black, 1px 1px 0 $bright-black;;
+.section_subtitle {
+  font-size: 1.9rem;
+  color: $silver;
+  margin: 0.2rem;
+  text-align: center;
+  text-shadow: -1px -1px 0 $bright-black, -1px 1px 0 $bright-black,
+    1px 1px 0 $bright-black;
 }
 
 .section_text {
@@ -150,29 +150,48 @@ body {
 }
 
 //maximum security
-.security{
-    .section_title{
-        font-size: 2.2rem;
-    }
-    .section_subtitle{
-        font-size: 1.6rem;
-    }
-    .section_text{
-        font-size: 1.4rem;
-    }
-    .section_image{
-        @include center_content();
-        width: 95%;
-        height: 30%;
-    }
-    .section_image-item{
-        max-width: 100%;
-        max-height: 60vh;
-    }
+.security {
+  &.section_container {
+    height: 100vh;
+  }
+  .section_title {
+    font-size: 2.2rem;
+  }
+  .section_subtitle {
+    font-size: 1.6rem;
+  }
+  .section_text {
+    font-size: 1.4rem;
+  }
+  .section_image {
+    @include center_content();
+    width: 95%;
+    height: 30%;
+  }
+  .section_image-item {
+    max-width: 100%;
+    max-height: 60vh;
+  }
+  .purchase_button {
+    width: 90vw;
+    height: 30px;
+    margin-top: 50px;
+  }
+}
+
+.purchase_form{
+  .section_container{
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+    z-index: 999;
+  }
 }
 
 //scroll content hiding
-.cover{
+.cover {
   position: fixed;
   background: none;
   z-index: 99;
@@ -181,7 +200,7 @@ body {
   overflow: hidden;
 }
 
-.cover_bottom{
+.cover_bottom {
   height: 200vh;
   width: 100vw;
   top: 100vh;
@@ -189,7 +208,7 @@ body {
   background: linear-gradient(0deg, $bright-black 40%, $empty 100%);
 }
 
-.cover_top{
+.cover_top {
   height: 200vh;
   width: 100vw;
   top: -200vh;
