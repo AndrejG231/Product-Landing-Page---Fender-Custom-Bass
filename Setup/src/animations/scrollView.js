@@ -1,32 +1,31 @@
+let offset = 0;
+
+const calculateOffset = (scrollPos, pageHeight) => {
+  const coverOffset = scrollPos % pageHeight;
+
+  const realOffset =
+    coverOffset > pageHeight / 2 ? pageHeight - coverOffset : coverOffset;
+
+  const viewPortOffset = (realOffset / (pageHeight / 2)) * 200;
+
+  return viewPortOffset > 100 ? 100 : viewPortOffset;
+};
+
 const scrollView = () => {
-    const winHeight = window.innerHeight + 150;
-    const scrollPos = window.scrollY;
-    const topCover = document.querySelector('.cover_top');
-    const bottomCover = document.querySelector('.cover_bottom');
-    
-    //baseTop = 0 => -200
-    //baseBottom = -100 => 100
-    let scrollAlignDiff = scrollPos % winHeight;
-    
-    if(scrollAlignDiff > winHeight - 180 && scrollAlignDiff < winHeight - 21){
-        window.scroll(0, scrollPos + 2)
-    }
-    else if(scrollAlignDiff < 180 && scrollAlignDiff > 21){
-        window.scroll(0, scrollPos - 2)
-    }
+  const pageHeight = window.innerHeight * 1.5;
+  const scrollPos = document.documentElement.scrollTop;
 
-    if (scrollAlignDiff > winHeight/2){
-        overFlow = scrollAlignDiff % (winHeight/2)
-        scrollAlignDiff = winHeight/2 - overFlow
-    };
+  //   if (scrollPos < winHeight / 2) {
+  //     document.documentElement.scrollTop = winHeight / 2;
+  //   }
 
-    const align = 200 * (scrollAlignDiff/(winHeight/2))
+  const topCover = document.querySelector(".cover_top");
+  const bottomCover = document.querySelector(".cover_bottom");
 
-    topCover.style.top = `${-200 + align}vh`
-    bottomCover.style.top = `${100 - align}vh`
+  const viewPortOffset = calculateOffset(scrollPos, pageHeight);
 
-    
-}
+  topCover.style.transform = `translateY(${viewPortOffset}vh)`;
+  bottomCover.style.transform = `translateY(-${viewPortOffset}vh)`;
+};
 
-
-setInterval(scrollView, 15)
+document.addEventListener("scroll", () => scrollView());
