@@ -1,0 +1,25 @@
+.size_enter {
+  transform: scale(0);
+  transition: all 0.7s linear;
+}
+
+.left_enter {
+  transform: translateX(-100vw);
+  transition: all 0.5s linear;
+}
+
+.right_enter {
+  transform: translateX(200vw);
+  transition: all 0.5s linear;
+}
+
+// specific elements:
+.vintage {
+  &.size_enter {
+    transform: scale(0) rotate(-15deg);
+  }
+
+  &.right_enter {
+    transform: translateX(200vw) rotate(-15deg);
+  }
+}
