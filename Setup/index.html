@@ -71,15 +71,33 @@
     <aside>
         <div class="cover cover_top"></div>
         <div class="cover cover_bottom"></div>
-        <!-- </aside>
-    <summary class='purchase_form'>
-        <article class='section_container'>
-            
+    </aside>
+    <section class='purchase_modal'>
+        <article class='purchase_form-container'>
+            <form class="purchase_form-form">
+                <input type="text" name="first_name" placeholder="First name">
+                <input type="text" name="last_name" placeholder="Last name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="phone" placeholder="Phone number">
+                <input type="text" name="country" placeholder="Country" autocomplete="shipping country">
+                <input type="text" name="city" placeholder="City" autocomplete="shipping locality">
+                <input type="text" name="street" placeholder="Street" autocomplete="shipping street-address">
+                <input type="text" name="postcode" placeholder="Postal code" autocomplete="shipping postal-code">
+            </form>
+            <summary class="purchase_form-summary">
+                <button class="purchase_form-checkout">Check Out</button>
+                <aside>Well, you cant actually buy it here.. But feel free to check it out on <a
+                        href="https://www.gear4music.sk/sk/Gitary-and-Basgitary/Fender-Custom-Shop-57-Journey-Relic-P-Bass-2-Color-Sunburst/3CH2"
+                        target="_blank" title="Go to the store..">official store.</a>
+                </aside>
+                <button class="purchase_form-goBack">Go back</button>
+            </summary>
         </article>
-    </summary> -->
+    </section>
 </body>
-<!-- scroll animation -->
+
 <script src="./src/animations/scrollView.js"></script>
 <script src="./src/animations/animations.js"></script>
+<script src="./src/animations/app.js"></script>
 
 </html>

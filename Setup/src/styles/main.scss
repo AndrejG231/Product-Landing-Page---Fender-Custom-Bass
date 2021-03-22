@@ -44,9 +44,9 @@ body {
   &.first {
     margin-top: 0;
   }
-  // &.last {
-  //   margin-bottom: 0;
-  // }
+  &.last {
+    margin-bottom: 0;
+  }
 }
 
 .section_title {
@@ -209,7 +209,7 @@ body {
       font-size: 2rem;
     }
     @media screen and (min-width: 1200px) {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 }
@@ -249,6 +249,7 @@ body {
     }
   }
   .purchase_button {
+    cursor: pointer;
     width: 90vh;
     height: 30px;
     margin-top: 50px;
@@ -261,17 +262,6 @@ body {
       padding: 15px;
       font-size: 2rem;
     }
-  }
-}
-
-.purchase_form {
-  .section_container {
-    position: fixed;
-    top: 5vh;
-    left: 5vw;
-    width: 90vw;
-    height: 90vh;
-    z-index: 999;
   }
 }
 
@@ -297,3 +287,106 @@ body {
   background: linear-gradient(180deg, $bright-black 50%, $empty 100%);
 }
 
+//purchases modal
+.purchase_modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  @include center_content();
+  .purchase_form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background: linear-gradient(
+      0deg,
+      $bright-black 0%,
+      $dark-brown 50%,
+      $bright-black 100%
+    );
+    border: 5px solid $dark-brown;
+    box-shadow: 0px 0px 88px 78px rgba(0, 0, 0, 1);
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr 2fr;
+    }
+    .purchase_form-form {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: space-evenly;
+      margin: 10px;
+      @media screen and (max-width: 800px) {
+        gap: 2px;
+        margin: 0px;
+      }
+
+      input {
+        height: 30px;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        text-align: center;
+        @media screen and (max-width: 800px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .purchase_form-summary {
+      display: flex;
+      flex-direction: column;
+      margin: 30px 10px;
+      padding: 20px;
+      padding-left: 25px;
+      border-left: 4px solid $dark-brown;
+      justify-content: space-evenly;
+      align-items: center;
+      @media screen and (max-width: 800px) {
+        margin: 0px 10px;
+        padding: 0;
+        border-left: none;
+      }
+    }
+    aside {
+      font-size: 1.9rem;
+      color: white;
+      @media screen and (max-width: 800px) {
+        font-size: 1.4rem;
+      }
+      a {
+        color: white;
+        &:hover {
+          background: $light-brown;
+          border-radius: 3px;
+          color: whitesmoke;
+        }
+      }
+    }
+    button {
+      height: 60px;
+      padding: 10px 20px;
+      font-size: 2rem;
+      border-radius: 60px;
+      border: 3px solid white;
+      color: white;
+      background: $dark-brown;
+      @media screen and (max-width: 800px) {
+        font-size: 1.2rem;
+        height: 40px;
+        width: 90%;
+      }
+      &:hover {
+        border: $dark-brown;
+        color: $dark-brown;
+        background: white;
+      }
+    }
+  }
+}

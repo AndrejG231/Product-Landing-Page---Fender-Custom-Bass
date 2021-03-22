@@ -13,6 +13,12 @@
   transition: all 0.5s linear;
 }
 
+.purchase_modal {
+  //--> intial hidden position
+  transition: all 0.3s linear;
+  top: 100vh;
+}
+
 // specific elements:
 .vintage {
   &.size_enter {

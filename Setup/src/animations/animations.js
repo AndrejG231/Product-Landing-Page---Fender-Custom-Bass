@@ -8,7 +8,7 @@ const animationHandler = () => {
     const elementDisplayHeight = element.getBoundingClientRect().top;
 
     if (
-      screenHeight / elementDisplayHeight > 1.2 &&
+      screenHeight / elementDisplayHeight > 1.1 &&
       elementDisplayHeight < screenHeight / 0.8
     ) {
       // Specific transition containing elements:
@@ -47,6 +47,7 @@ const animationHandler = () => {
       screenHeight / elementDisplayHeight > 1.2 &&
       elementDisplayHeight < screenHeight / 0.8
     ) {
+      //Global transition
       element.style.transform = "translateX(0)";
     }
   });
