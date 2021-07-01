@@ -1,0 +1,37 @@
+.size_enter {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.7s linear;
+  transition: all 0.7s linear;
+}
+
+.left_enter {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.right_enter {
+  -webkit-transform: translateX(200vw);
+          transform: translateX(200vw);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.purchase_modal {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  top: 100vh;
+}
+
+.vintage.size_enter {
+  -webkit-transform: scale(0) rotate(-15deg);
+          transform: scale(0) rotate(-15deg);
+}
+
+.vintage.right_enter {
+  -webkit-transform: translateX(200vw) rotate(-15deg);
+          transform: translateX(200vw) rotate(-15deg);
+}
+/*# sourceMappingURL=animation.css.map */
